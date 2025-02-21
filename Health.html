@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilpal - Student Health Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            background: #0056b3;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #007BFF;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pilpal</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard" onclick="navigateTo('dashboard')">Dashboard</a></li>
+                <li><a href="#appointments" onclick="navigateTo('appointments')">Appointments</a></li>
+                <li><a href="#documents" onclick="navigateTo('documents')">Documents</a></li>
+                <li><a href="#notifications" onclick="navigateTo('notifications')">Notifications</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="dashboard">
+        <h2>Personal Health Dashboard</h2>
+        <p>View and manage your medical history, prescriptions, and diagnostic reports.</p>
+    </section>
+
+    <section id="appointments">
+        <h2>Book an Appointment</h2>
+        <p>Schedule consultations with healthcare providers and receive reminders.</p>
+        <button onclick="bookAppointment()">Book Now</button>
+    </section>
+
+    <section id="documents">
+        <h2>Generate Medical Documents</h2>
+        <p>Request medical certificates or leave permissions for selected time periods.</p>
+        <button onclick="generateDocument()">Generate</button>
+    </section>
+
+    <section id="notifications">
+        <h2>Notifications and Reminders</h2>
+        <p>Stay updated with alerts for upcoming appointments, vaccinations, and prescription refills.</p>
+        <button onclick="showNotifications()">Check Notifications</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pilpal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function bookAppointment() {
+            alert("Appointment booked successfully!");
+        }
+        
+        function generateDocument() {
+            alert("Medical document generated and ready for download!");
+        }
+        
+        function showNotifications() {
+            alert("You have new notifications.");
+        }
+
+        function navigateTo(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
